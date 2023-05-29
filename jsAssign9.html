@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: maroon;
+                color: aquamarine;
+            }
+            @keyframes animation1{
+                from{left: 0px;}
+                to{left: 50px;}
+            } 
+            div{
+                position: relative;
+                animation: animation1;
+                animation-duration: 10s;
+                
+            }           
+        </style>
+        <script>
+            var compound = ()=>{
+                var ci=1;
+                var p= parseInt(document.getElementById("p").value);
+                var r= parseInt(document.getElementById("r").value);
+                var n= parseInt(document.getElementById("n").value);
+                ci=(p*(1+pow((1+r/100),n)))-p;
+                document.getElementById("mydiv").innerHTML="Compount Interest = "+ci;
+                document.getElementById("mydiv").style.backgroundColor="red";
+                document.getElementById("mydiv").style.color="white";
+                document.getElementById("mydiv").style.width="50%";
+
+            }
+            function pow(a,b) {
+            var mul = 1;
+            for (var i = 1; i <= b; i++) {
+                mul = mul * a;
+            }
+            return mul;
+        }
+        </script>
+    </head>
+<body>
+    <table>
+        <tr>
+            <td>Enter Principal : </td>
+            <td><input type="number" name="p" id="p"></td>
+        </tr>
+        <tr>
+            <td> Enter Rate % : </td>
+            <td><input type="number" name="r" id="r"><br></td>
+        </tr>
+        <tr>
+            <td> Enter duration in years : </td>
+            <td><input type="number" name="n" id="n"><br></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td></td>
+            <td> <button type="button" name="btn" id="btn" onclick="compound()">CALCULATE</button></td>
+        </tr>
+    </table>
+
+
+   
+    <div id="mydiv"></div>
+</body>
+</html>

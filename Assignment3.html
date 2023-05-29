@@ -1,0 +1,61 @@
+<html>
+   <style>
+     table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+   </style>
+    <body>
+        <form>
+            <table style="background-color:pink;border-width: 2;" cellpadding="7">
+                <tr>
+                    <td><label for="name">name</label></td>
+                    <td><input type="text" name="name" id="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="emp">Employee Code</label></td>
+                    <td><input type="number" name="emp" id="emp" required min="0" style="width: 50;"></td>
+                </tr>
+                <tr>
+                    <td>Department</td>
+                    <td >
+                        <input type="radio" name="dept" id="ADMIN"><label for="ADMIN">ADMIN</label><br>
+                        <input type="radio" name="dept" id="HR"><label for="HR">HR</label><br>
+                        <input type="radio" name="dept" id="TECHNICAL"><label for="TECHNICAL">TECHNICAL</label><br>
+                        <input type="radio" name="dept" id="ACCOUNTS"><label for="ACCOUNTS">ACCOUNTS</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="join">Date of joining</label></td>
+                    <td><input type="number" name="day" id="day" placeholder="dd" min="1" max="31" style="width: 40;">/
+                        <input type="number" name="month" id="month" placeholder="mm" min="1" max="12" style="width: 40;">/
+                        <input type="number" name="year" id="year" placeholder="yyyy" style="width: 50;"></td>
+                </tr>
+                <tr>
+                    <td><label for="add">Address</label></td>
+                    <td><textarea name="add" id="add" cols="80%" rows="5%" draggable="true"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="attend">Training Programmers Attended</label></td>
+                    <td>
+                        <input type="checkbox" name="attend" id="HTML"><label for="HTML">HTML</label><br>
+                        <input type="checkbox" name="attend" id="JAVA"><label for="JAVA">JAVA</label><br>
+                        <input type="checkbox" name="attend" id="CLIENT/SERVER"><label for="CLIENT/SERVER">CLIENT/SERVER</label><br>
+                        <input type="checkbox" name="attend" id=".NET"><label for=".NET">.NET</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="need">Training Programmers need to attend</label></td>
+                    <td><select multiple style="height: 40;">
+                        <option value="JAVASCRIPT">JAVASCRIPT</option>
+                        <option value="JSTRUTS">JSTRUTS</option>
+                    </select></td>
+                </tr>
+                <TR>
+                    <td>Send the information at</td>
+                    <td><a href="mailTo:empinfo@patni.com">empinfo@patni.com</a></td>
+                </TR>
+            </table>
+        </form>
+    </body>
+</html>

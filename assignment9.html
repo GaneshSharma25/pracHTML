@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppointmentScheduler</title>
+    <link rel="stylesheet" href="assignment9.css">
+</head>
+
+<body>
+
+    <h1>Appointment Scheduler</h1>
+
+    <fieldset>
+        <legend>Personal Infromation</legend>
+        <table>
+
+            <tr>
+                <td>
+                    <label for="name"> Name </label><br>
+                    <input type="text" id="name" name="name">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label for="tele"> Telephone Number </label><br>
+                    <input type="number" id="tele" name="tele" min="0">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label for="mail"> E-Mail Address </label><br>
+                    <input type="email" id="mail" name="mail">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label for="dob"> Date of Birth </label><br>
+                    <input type="date" id="dob" name="dob">
+                </td>
+            </tr>
+
+        </table>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Appointment Request</legend>
+        <table>
+            <tr>
+                <td>What is the reason for your visit?<br>
+                    <select name="reasons" id="reasons" aria-placeholder="Select or type your reason.">
+                        <option value="Booking">Booking</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Current Pain Level <br>
+                    <input type="range" name="pain" id="pain" minlength="1" maxlength="10">
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>
+                    Preferred Date
+                    <br>
+                    <input type="date" name="predate" id="predate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Preferred Time
+                    <br>
+                    <input type="time" name="pretime" id="pretime">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+    <button type="button" name="btn" id="btn" value="btn">Submit</button>
+
+
+</body>
+
+</html>

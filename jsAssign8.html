@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <script>
+        function pow() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var mul = 1;
+            for (var i = 1; i <= b; i++) {
+                mul = mul * a;
+            }
+            document.getElementById("mydiv").innerHTML = mul;
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Enter base : </td>
+            <td><input type="number" name="a" id="a"></td>
+        </tr>
+        <tr>
+            <td> Enter power : </td>
+            <td><input type="number" name="b" id="b"><br></td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+            <td></td>
+            <td> <button type="button" name="btn" id="btn" onclick="pow()">CALCULATE</button></td>
+        </tr>
+    </table>
+
+
+   
+    <div id="mydiv"></div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+table{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+  
+    }
+#name{
+    box-shadow: -0.5px -0.5px 1px rgb(59, 58, 58);
+}
+#tele{
+    box-shadow: -0.5px -0.5px 1px rgb(59, 58, 58);
+}
+#mail{
+    box-shadow: -0.5px -0.5px 1px rgb(59, 58, 58);
+    width: 22%;
+}
+#dob{
+    box-shadow: -0.5px -0.5px 1px rgb(59, 58, 58);
+    width: 9%;
+}
+#reasons{
+    box-shadow: -0.5px -0.5px 1px rgb(59, 58, 58);
+    width: 15%;
+}
+#predate{
+    box-shadow: -0.5px -0.5px 1px rgb(59, 58, 58);
+    width: 8.5%;
+}
+#pretime{
+    box-shadow: -0.5px -0.5px 1px rgb(59, 58, 58);
+    width: 7.19%;
+}
+#btn{
+    box-shadow: 1px 1px 1px black;
+}

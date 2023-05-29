@@ -1,0 +1,193 @@
+<html>
+<style>
+    table,
+    th,
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+</style>
+<script>
+
+    function validate() {
+        validateName();
+        validateGender();
+        validQualification();
+        validSkill();
+    }
+    function validateName() {
+        var a = nameData();
+        if (a) {
+            document.getElementById("ner").innerHTML = "*valid"
+            document.getElementById("ner").style.color = "green"
+            document.getElementById("ner").style.fontSize="12px"
+            document.getElementById("name").style.boxShadow="2px 2px 2px green"
+        }
+        else {
+            document.getElementById("ner").innerHTML = "*InValid"
+            document.getElementById("ner").style.color = "red"
+            document.getElementById("ner").style.fontSize="12px"
+            document.getElementById("name").style.boxShadow="1px 1px 1px red"
+        }
+    }
+    function nameData() {
+        var a = document.getElementById("name").value;
+        if (!(a == "") && isNaN(a)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function validateGender() {
+        var a = gender();
+    
+        if (a) {
+            document.getElementById("spn").innerHTML = "*valid"
+            document.getElementById("spn").style.color = "green"
+            document.getElementById("spn").style.fontSize="12px"
+          
+        }
+        else {
+            document.getElementById("spn").innerHTML = "*Chooose a block"
+            document.getElementById("spn").style.color = "red"
+            document.getElementById("spn").style.fontSize="12px"
+        }
+    }
+    function gender() {
+        
+        var a = document.getElementsByName("gen");
+        for (var i = 0; i < a.length; i++) {
+            if (a[i].checked) {
+                
+                return true;
+               
+            }
+        }
+
+        return false;
+    }
+
+    function validQualification(){
+        var a= Qual()
+        if(a){
+            document.getElementById("diperr").innerHTML="*valid"
+            document.getElementById("diperr").style.color = "green"
+            document.getElementById("diperr").style.fontSize="12px"
+        }else{
+            document.getElementById("diperr").innerHTML="*InValid"
+            document.getElementById("diperr").style.color = "red"
+            document.getElementById("diperr").style.fontSize="12px"
+        }
+    }
+    function Qual(){
+        var a = document.getElementsByName("Qual");
+        for(let i=0;i<a.length;i++){
+            if(a[i].checked){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    }
+function validSkill(){
+
+    var check = skill();
+    if(check){
+        document.getElementById("skillErr").innerHTML = "*Valid";
+        document.getElementById("skillErr").style.color="green";
+        document.getElementById("skillErr").style.fontSize="12px";
+
+    }else{
+        document.getElementById("skillErr").innerHTML = "*InValid";
+        document.getElementById("skillErr").style.color="Red";
+        document.getElementById("skillErr").style.fontSize="12px";
+    }
+
+}
+
+function skill(){
+    var a = document.getElementsByName("skill")
+
+    for(let i = 0; i<a.length ; i++){
+        if(a[i].checked){
+            return true;
+        }       
+    }
+    return false;
+}
+
+
+
+</script>
+
+<body>
+    <form>
+
+        <table width="30%" align="left" cellpadding="7px">
+
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" name="name" id="name">&nbsp;<span id="ner"></span></td>
+            </tr>
+            <tr>
+            <tr></tr>
+            <td><label for="DOB"><span style="color: red;">DOB</span> </label></td>
+            <td><input type="date" name="DOB" id="DOB"></td>
+            </tr>
+            <tr>
+            <tr></tr>
+            <td><label for="gen">GENDER</label></td>
+            <td><input type="radio" name="gen" id="male" value="male"><label for="male">male</label>
+                &nbsp;
+                <input type="radio" name="gen" id="female" value="female"><label for="female">female</label>
+                &nbsp;<span id="spn"></span>
+            </td>
+            </tr>
+            <tr>
+            <tr></tr>
+            <td><label for="Qual">QUALIFICATION</label></td>
+            <td><input type="radio" name="Qual" id="BE"><label
+                    for="BE">BE</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="Qual" id="BTECH"><label for="BTECH">BTECH</label><span id="diperr"></span>
+                <br>
+                <input type="radio" name="Qual" id="MTECH"><label for="MTECH">MTECH</label>&nbsp;
+                <input type="radio" name="Qual" id="DIPLOMA"><label for="DIPLOMA">DIPLOMA</label>
+            </td>
+            </tr>
+            <tr>
+            <tr></tr>
+            <td><label for="skill">SKILL</label></td>
+            <td><input type="checkbox" name="skill" id="JAVA"><label for="JAVA">JAVA</label>
+                <input type="checkbox" name="skill" id="C++"><label for="C++">C++</label>
+                <input type="checkbox" name="skill" id="NODE"><label for="NODE">NODE</label>
+                <br>
+                <input type="checkbox" name="skill" id="PYTHON"><label
+                    for="PYTHON">PYTHON</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="skill" id="C#"><label for="C#">C#</label> 
+                <span id="skillErr"></span>
+            </td>
+            </tr>
+            <tr>
+            <tr></tr>
+            <td><label for="addr">ADDRESS</label></td>
+            <td><select name="addr" id="addr" multiple>
+                    <option value="Pune">Pune</option>
+                    <option value="Mumbai" selected>Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" name="btn" id="submit" value="submit" onclick="validate()">Submit</button>
+                    <button type="reset" name="btn" id="reset" value="reset">Cancel</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>
